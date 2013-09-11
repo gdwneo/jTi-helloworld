@@ -4,10 +4,16 @@ exports.init = function() {
     var scope = this;
     $('#main-menu').click(function(e) {
         if (e.source.type) {
+            console.log('loading ' + e.source.type);
             scope.controller(e.source.type).document.get(0).sliderChange();
         }
     });
-
+    $('#main-menu').get(0).onLoadComplete = function() {
+        var home = $("label[type='home']", this);
+        $('#main-menu').click({
+            source : home.get(0)
+        });
+    };
     this.model('MenuItem').load([{
         ID : 1,
         Name : 'Home',
@@ -56,7 +62,7 @@ exports.init = function() {
         }]
     }]);
     this.document.open();
-    scope.controller('home');
+    //this.controller('home').document.get(0).sliderChange();
 };
 
 exports.dispose = function() {

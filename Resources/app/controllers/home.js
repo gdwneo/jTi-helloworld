@@ -7,11 +7,4 @@ exports.init = function() {
     //this.document.open();
     this.document.attr('targetWin', $('#container').get(0));
     $('#container').append(this.document);
-    console.log(new Date());
-    this.document.animate({
-        left : 0,
-        duration : 500
-    }, function() {
-        console.log(new Date());
-    });
 };

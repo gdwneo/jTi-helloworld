@@ -2,9 +2,9 @@ exports.view = function() {
     return {
         xtype : 'slideview',
         id : 'home-main',
-        left : Ti.Platform.getDisplayCaps().platformWidth,
+        left : Ti.Platform.getDisplayCaps().platformWidth-100,
         slideLimit : 263,
-        sliding : false,
+        sliding : true,
         width : Ti.Platform.getDisplayCaps().platformWidth,
         height : Ti.UI.FILL,
         backgroundImage : '/images/home/bg.png',
