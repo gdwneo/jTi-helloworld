@@ -99,7 +99,7 @@ eventCache = {};
 		},
 		toEnumerable : function() {
 			// return jTi.toEnumerable(this, function(e) {
-				// return jTi(e);
+			// return jTi(e);
 			// });
 			return jTi.toEnumerable(this);
 		},
@@ -253,6 +253,10 @@ eventCache = {};
 			return typeof obj === "object" || typeof obj === "function" ? class2type[ core_toString.call(obj)] || "object" : typeof obj;
 		},
 
+		isAndroid : function() {
+			return Ti.Platform.name === 'android';
+		},
+		
 		isFunction : function(obj) {
 			return jTi.type(obj) === "function";
 		},
@@ -525,7 +529,7 @@ eventCache = {};
 		toEnumerable : function(elem, predicate) {
 			/// <summary>each contains elements. to Enumerable current context.</summary>
 			// if ( elem instanceof jTi) {
-				// elem = elem.toArray();
+			// elem = elem.toArray();
 			// }
 			var enumerable = root.Enumerable.from(elem);
 			if (jTi.isFunction(predicate)) {

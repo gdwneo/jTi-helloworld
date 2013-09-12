@@ -1,7 +1,7 @@
 exports.view = function() {
 	return {
 		xtype : 'slideview',
-		id : 'home-main',
+		id : 'latest-main',
 		left : 263,
 		slideLimit : 263,
 		catchMove : 50,
@@ -9,7 +9,6 @@ exports.view = function() {
 		width : Ti.Platform.getDisplayCaps().platformWidth,
 		height : Ti.UI.FILL,
 		//backgroundImage : '/images/home/bg.png',
-
 		backgroundColor : '#fff',
 		children : [{
 			xtype : 'view',
@@ -20,7 +19,7 @@ exports.view = function() {
 			opacity : 0.9,
 			children : [{
 				xtype : 'button',
-				id : 'home-switch',
+				id : 'latest-switch',
 				left : 9,
 				width : 27,
 				height : 27,
@@ -29,7 +28,7 @@ exports.view = function() {
 				backgroundImage : '/images/icon/menuleft.png'
 			}, {
 				xtype : 'button',
-				id : 'home-refresh',
+				id : 'latest-refresh',
 				right : 9,
 				width : 27,
 				height : 27,
@@ -40,7 +39,7 @@ exports.view = function() {
 				//width : Ti.Platform.getDisplayCaps().width,
 				width : Ti.UI.SIZE,
 				height : Ti.UI.SIZE,
-				text : 'Home',
+				text : 'The Latest',
 				//textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
 				color : '#fff',
 				font : {
@@ -50,4 +49,4 @@ exports.view = function() {
 			}]
 		}]
 	};
-};
+}; 
