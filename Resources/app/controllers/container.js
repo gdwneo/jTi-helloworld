@@ -10,7 +10,7 @@ exports.init = function() {
 		}
 		var currentView = scope.controller(type).document;
 		currentView.attr('zIndex', 30);
-		//currentView.get(0).sliderChange();
+		currentView.get(0).sliderChange();
 		if (sliderViews.indexOf(type) < 0) {
 			sliderViews.push(type);
 		}

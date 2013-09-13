@@ -8,9 +8,9 @@ exports.view = function() {
 		sliding : true,
 		width : Ti.Platform.getDisplayCaps().platformWidth,
 		height : Ti.UI.FILL,
-		//backgroundImage : '/images/home/bg.png',
+		backgroundImage : '/images/home/bg.png',
 
-		backgroundColor : '#fff',
+		//backgroundColor : '#fff',
 		children : [{
 			xtype : 'view',
 			top : 0,

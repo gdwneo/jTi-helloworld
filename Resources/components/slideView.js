@@ -1,6 +1,5 @@
 exports.module = function(param) {
-	var view = Ti.UI.createView(param), titleView, slideBtn;
-
+	var view, titleView, slideBtn;
 	var start = {
 		x : 0,
 		gx : 0,
@@ -8,8 +7,18 @@ exports.module = function(param) {
 	};
 	//var slideLimit = 417;
 	var t = Ti.UI.create2DMatrix();
-	var sl = 0;
+	var sl = param.sliding ? param.slideLimit : 0;
 	var catchMove = param.catchMove;
+
+	if (jTi.isAndroid() || !param.sliding) {
+		view = Ti.UI.createView(param);
+	} else {
+		var offsetX = param.left;
+		param.left = 0;
+		param.transform = t.translate(offsetX, 0);
+		view = Ti.UI.createView(param);
+		t.setTx(offsetX);
+	}
 
 	view.addEventListener('touchstart', sliderTouchStart);
 	view.addEventListener('touchmove', sliderTouchMove);
