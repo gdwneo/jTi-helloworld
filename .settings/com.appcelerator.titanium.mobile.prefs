@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+iosLaunchConfigurationAttributes/ATTR_MINIFY=true
+iosLaunchConfigurationAttributes/ATTR_PROJECT_NAME=jTi-helloworld
+iosLaunchConfigurationAttributes/appid=com.singtel.pushsample
+iosLaunchConfigurationAttributes/certificate=Junxiang Ng (SN848RRUGM)
+iosLaunchConfigurationAttributes/distribute_path=/Users/gdwneo/Documents/Titanium_Studio_Workspace/jTi-helloworld/build
+iosLaunchConfigurationAttributes/keychain=
+iosLaunchConfigurationAttributes/output_format=ipa
+iosLaunchConfigurationAttributes/sdk_version=6.1
+iosLaunchConfigurationAttributes/uuid=8F01F321-4D44-4EC6-9463-B984C3A607F7

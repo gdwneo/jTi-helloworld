@@ -48,6 +48,23 @@ exports.view = function() {
 					fontFamily : 'Roboto-Regular'
 				}
 			}]
+		},{
+			xtype : 'view',
+			top:49,
+			width : Ti.UI.FILL,
+			height : Ti.UI.FILL,
+			children:[{
+				xtype : 'label',
+				id:'device-token',
+				width : Ti.UI.SIZE,
+				height : Ti.UI.SIZE,
+				text : deviceToken,
+				color : '#fff',
+				font : {
+					fontSize : 16,
+					fontFamily : 'Roboto-Regular'
+				}
+			}]
 		}]
 	};
 };
